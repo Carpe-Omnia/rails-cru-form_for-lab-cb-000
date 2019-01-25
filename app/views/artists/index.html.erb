@@ -1,4 +1,6 @@
 <% @Artists.each do  |artist| %>
-  <%= artist.name %>
+  <a href=<%=artists_path(artist)
+    <%= artist.name %>
+  </a>
   <br>
 <% end %>
