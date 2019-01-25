@@ -2,13 +2,13 @@ class ArtistsController < ApplicationController
   def index
     @Artists = Artist.all
   end
-  
+
   def create
     @artist = Artist.new(artist_params(:name, :bio))
     @artist.save
     redirect_to artist_path(@artist)
   end
-  
+
   def new
   end
 
@@ -16,11 +16,11 @@ class ArtistsController < ApplicationController
     @artist = Artist.find_by(id: params[:id])
   end
 
-  def update 
+  def update
     @artist = Artist.find(params[:id])
     @artist.update(artist_params(:name, :bio))
     redirect_to artist_path(@artist)
-  end   
+  end
 
 
   private
