@@ -1,6 +1,7 @@
 <form action='/genres' method="post">
   Name:
   <input id="genre_name" type="text" name="genre[name]"><br>
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   Submit:
   <input type="submit" name="Create Genre" id="Create Genre" >
 </form>
