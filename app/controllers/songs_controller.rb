@@ -6,6 +6,7 @@ class SongsController < ApplicationController
   def create
     @song = song.new(song_params(:name))
     art = Artist.find_or_create_by(name: params[:song][:artist])
+    gen = Genre.find_or_create_by(name: params[:song][:genre])
     @song.artist_id = art.id
     @song.save
     redirect_to song_path(@song)
