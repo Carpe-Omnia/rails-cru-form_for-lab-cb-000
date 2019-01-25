@@ -2,7 +2,9 @@
   <% @songs.each do  |song| %>
     <li>
       <a href=<%=song_path(song)%> >
+        <p>
         <%= song.name %>
+      </p>
       </a>
       by
       <a href=<%=artist_path(song.artist)%> >
