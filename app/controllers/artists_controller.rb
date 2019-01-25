@@ -5,7 +5,7 @@ class ArtistsController < ApplicationController
   def new
   end
   def create
-    @artist = Artist.new()
+    @artist = Artist.new(artist_params(:name, :bio))
   end
   def show
     @artist = Artist.find_by(id: params[:id])
