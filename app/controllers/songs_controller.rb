@@ -27,6 +27,7 @@ class SongsController < ApplicationController
     gen = Genre.find_or_create_by(name: params[:song][:genre])
     @song.artist_id = art.id
     @song.genre_id = gen.id
+    @song.save
     redirect_to song_path(@song)
   end
 
