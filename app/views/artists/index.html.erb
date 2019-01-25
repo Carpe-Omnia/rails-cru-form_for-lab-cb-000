@@ -1,9 +1,9 @@
 <ul>
-<% @Artists.each do  |artist| %>
-  <li>
-    <a href=<%=artists_path(artist)%> >
-      <%= artist.name %>
-    </a>
-  </li>
-<% end %>
+  <% @Artists.each do  |artist| %>
+    <li>
+      <a href=<%=artists_path(artist)%> >
+        <%= artist.name %>
+      </a>
+    </li>
+  <% end %>
 </ul>
